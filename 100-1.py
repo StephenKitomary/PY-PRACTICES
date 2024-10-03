@@ -30,3 +30,30 @@ names_list = names.split(",")
 
 print(names_list[0])
 """
+row1 = ["⬜️","⬜️","⬜️"]
+row2 = ["⬜️","⬜️","⬜️"]
+row3 = ["⬜️","⬜️","⬜️"]
+
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+
+position = int(input("Where do you want to put the treasure?"))
+
+position_string =str(position)
+column = position_string[0]
+column_int = int(column)
+row = position_string[1]
+row_int = int(row)
+if row_int== 1:
+    row1[column_int-1] = "X"
+
+elif row_int== 2:
+    row2[column_int-1] = "X"
+
+elif row_int== 3:
+    row3[column_int-1] = "X"
+
+else:
+    print("Invalid number")
+
+print(f"{row1}\n{row2}\n{row3}")
