@@ -59,6 +59,7 @@ else:
 
 print(f"{row1}\n{row2}\n{row3}")
 """
+"""
 #####################################################################
 #    A PROGRAM TO FIND IF A NUMBER HAS A PERFECT PERFECT CUBE ROOT.
 #####################################################################
@@ -76,4 +77,41 @@ if ans**3 == abs(number):
     print(f"The number: {number} is a perfect cube, with root, {ans}")
 else:
     print("The number you provided has no cube root")
+
+"""
+#######################################################
+# CLASSROOM EXERCISE - SOLVING FOR Y=X^2 - 3
+#######################################################
+high = 3.0
+low = 0.0
+iterations = 0
+max_iterations = 1000
+
+epsilon = 0.0001
+midpoint = (high+low)/2
+checking_number= ((midpoint)**2 - 3)
+while (iterations < max_iterations):
+    if (abs(((midpoint)**2) - 3)) <= epsilon:
+        #print((abs((midpoint)**2) - 3))
+        break
+    
+    
+    
+    if checking_number >0:
+        high = midpoint
+        #print(checking_number)
+
+    else:
+    
+        low = midpoint
+        #print(checking_number)
+    midpoint = (high+low)/2
+    iterations = iterations+1
+    checking_number= ((midpoint)**2 - 3)
+
+print(f"answer is {midpoint}")
+
+
+
+
 
