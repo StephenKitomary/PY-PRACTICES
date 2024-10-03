@@ -30,6 +30,7 @@ names_list = names.split(",")
 
 print(names_list[0])
 """
+"""
 row1 = ["⬜️","⬜️","⬜️"]
 row2 = ["⬜️","⬜️","⬜️"]
 row3 = ["⬜️","⬜️","⬜️"]
@@ -57,3 +58,22 @@ else:
     print("Invalid number")
 
 print(f"{row1}\n{row2}\n{row3}")
+"""
+#####################################################################
+#    A PROGRAM TO FIND IF A NUMBER HAS A PERFECT PERFECT CUBE ROOT.
+#####################################################################
+
+number = int(input(" Please Enter a number to test if had a perfect Xube root"))
+ans = 0
+
+while ( ans**3 < abs(number)):
+    ans = ans+1
+    
+if ans**3 == abs(number):
+    if number < 0:
+        ans = -ans
+
+    print(f"The number: {number} is a perfect cube, with root, {ans}")
+else:
+    print("The number you provided has no cube root")
+
