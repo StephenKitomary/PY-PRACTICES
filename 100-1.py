@@ -23,9 +23,10 @@ each = round(total_tip/people, 2)
 
 print(f"Each person should pay: ${each}")
 """
-
+"""
 names = input("Gemme the names of the people separated by a comma")
 
 names_list = names.split(",")
 
 print(names_list[0])
+"""
