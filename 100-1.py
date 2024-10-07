@@ -79,6 +79,8 @@ else:
     print("The number you provided has no cube root")
 
 """
+
+"""
 #######################################################
 # CLASSROOM EXERCISE - SOLVING FOR Y=X^2 - 3
 #######################################################
@@ -110,8 +112,12 @@ while (iterations < max_iterations):
     checking_number= ((midpoint)**2 - 3)
 
 print(f"answer is {midpoint}")
+"""
 
 
+def function_with_roots(x):
+    y = (x**2)-5
+    return y
 
-
-
+y = function_with_roots(5)
+print(y)
