@@ -114,10 +114,23 @@ while (iterations < max_iterations):
 print(f"answer is {midpoint}")
 """
 
-
+"""
 def function_with_roots(x):
     y = (x**2)-5
     return y
 
 y = function_with_roots(5)
 print(y)
+
+"""
+def find_root_range(x,z):
+    while True:
+    
+        checknumber= (x**4)+(x**3)+ ((5x)**2)-50
+        if checknumber < 0:
+            x=x+z
+        
+        else:
+            print(checknumber)
+            break
+find_root_range(-10,0.1)
