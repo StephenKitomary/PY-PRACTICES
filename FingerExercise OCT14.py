@@ -12,4 +12,3 @@ def log(x, base, epsilon):
     while abs(base**ans-x) >= epsilon:
         if (base**ans < x):
             low =ans
-        dsa
