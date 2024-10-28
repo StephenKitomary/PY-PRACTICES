@@ -67,8 +67,17 @@ start = -10.0
 end = 10.00
 step = 0.1
 epsilon = 0.001
-
+suffix = None
+counter = 1
 while start < end:
+	
+	if counter == 1:
+		suffix = "st"
+	elif counter == 2:
+		suffix = "nd"
+	elif counter == 3:
+		suffix = "rd"
+	
 	print(F"Searching for root between {start:.10f} and {end:.10f} ...")
 	range_low, slope  = find_root_range(start, end, step)
 	if range_low == None:
@@ -79,9 +88,10 @@ while start < end:
 	print(range_high)
 	if (range_low >= start and range_high <= end):
 		root_approximation = find_root(range_low, range_high, epsilon,slope)
-		print(F"Root found between {range_low:.10f} and {range_high:.10f}.")
-		print(F"Root approximation: x={root_approximation:.10f}, \
+		print(F"{counter}{suffix} Root found between {range_low:.10f} and {range_high:.10f}.")
+		print(F"{counter}{suffix} Root approximation: x={root_approximation:.10f}, \
 		f(x)={function_with_roots(root_approximation):.10f}")
 	else:
 		print("Root not found within range")
 	start = range_high
+	counter = counter +1
