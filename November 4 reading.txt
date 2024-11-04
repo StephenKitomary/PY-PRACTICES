@@ -1,0 +1,29 @@
+String, Tuples, Ranges and Lists
+
+seq[i]   returns the ith element of the sequence
+len(seq) returns the length of the sequence
+seq1+seq1 returns the concatenation of the two sequences, not available in ranges though
+n*seq returns the sequence that repeats the seq n times
+seq[start:end] returns the slice of the sequence
+e in seq returns a True if e is contained in seq, returns False otherwise
+e not in seq returns True if e is not in the sequence and False if e is found in the sequence
+for e in seq iterates through the elements of the sequence
+
+Dictionary comprehension:
+The general form for dictionary comprehension is: {key: value for id1, id2 in itearble if test}
+
+word_to_number = {w: d for d, w in number_to_word.items()}
+d.items() returns a view of the (key,value) pairs in d
+
+#####################################################################################################
+A CIPHER
+#####################################################################################################
+A cipher is an algorithim that maps a plain test to a crypto text. The simplest cipher are substitution
+cypher that replace each character in the plain text with a unique string.
+
+A book cipher is a cipher for which the key is derived from a book.
+
+gen_code_keys = (lambda book, plain_text:({c: str(book.find(c)) for c in plain_text}))
+
+(book.find(c)) retuns the index of the first occurence of the substring s1 in s, and -1 if s1 is not in s
+
