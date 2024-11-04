@@ -1,0 +1,119 @@
+CHAPTER ONE:
+Declarative knowledge
+Imperative knowledge
+algorithim
+computation
+fixed program computer
+stored program computer
+interpreter
+program counter 
+flow of control 
+programming language 
+universal turing machine 
+church turing thesis 
+halting problem 
+turing completeness 
+literals 
+inifix operators 
+syntax 
+static semantics 
+semantics 
+
+CHAPTER TWO:
+Reserved word 
+comment (in code) 
+straight-line program 
+conditional
+indentation 
+nested statement 
+compound expression 
+constant time 
+computational complexity
+conditional expression 
+strings 
+overload operator 
+repetition operator 
+type checking 
+indexing 
+slicing 
+type convertion(casting) 
+formatted string expression 
+input 
+unicode 
+interation 
+pseudo code
+while loop 
+hand simulation 
+break 
+for loop 
+tuple 
+range 
+in operator 
+PEP 8 style guide 
+
+CHAPTER THREE:
+decrementing gunction
+guess and checking 
+exhaustive enumeration 
+approximation 
+total ordering 
+bisection search 
+successive approximation
+binary numbers
+bit 
+switch 
+floating point
+significant digits
+exponent
+precision 
+rounding 
+
+CHAPTER FOUR:
+function definition 
+formal parameter 
+actual parameter 
+argument 
+function invocation 
+return statement 
+point of execution
+lambda abstratcion 
+test function 
+debugging 
+positional argument
+keyword argument 
+default parameter value 
+unpacking operator 
+namespace
+scope
+local variable 
+symbol table 
+stack frame 
+static(lexical) scoping
+stack 
+specification 
+client 
+assumption 
+guarantee 
+decomposition 
+guarantee
+decomposition 
+abstraction 
+docstring 
+help function 
+first class object 
+higher order programming 
+lambda expression 
+method 
+dot notation 
+
+CHAPTER FIVE:
+tuple
+multiple assignment 
+iterable object 
+type iterator 
+list 
+mutable type 
+immutable type 
+id function 
+object equality 
+side effect

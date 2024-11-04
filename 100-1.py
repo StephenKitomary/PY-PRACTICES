@@ -123,7 +123,7 @@ y = function_with_roots(5)
 print(y)
 
 """
-def find_root_range(x,z):
+"""def find_root_range(x,z):
     while True:
     
         checknumber= (x**4)+(x**3)+ ((5x)**2)-50
@@ -134,3 +134,7 @@ def find_root_range(x,z):
             print(checknumber)
             break
 find_root_range(-10,0.1)
+"""
+
+a=7
+print(type(a))
