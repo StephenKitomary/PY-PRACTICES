@@ -77,7 +77,7 @@ print(total_inventory_value)
 
 
 ##########################################
-###      FINGER EXCERCISE
+###      FINGER EXCERCISE 5.4
 ##########################################
 """Impliment a function that takes two lists with the same number of elemets,and returns the sum of each element in l1 raised to its corresponding element in l2"""
 
@@ -88,3 +88,22 @@ total = sum(map(lambda x, y: x ** y, l1, l2))
 
 print("The answer is:", total)
 print(results)
+
+#############################################
+#       FINGER EXERCISE 5.7
+#############################################
+
+
+def get_min(d):
+    smallest = 1000
+    for i in d:
+        print (i)
+        if ord(f'{i}') < smallest:
+            smallest= ord(i)
+    key = chr(smallest)
+    return d[key]
+
+
+d = {'x' :11, 'b' : 12}
+smallest =get_min(d)
+print(smallest)
