@@ -4,6 +4,10 @@ print(word_to_number)
 """
 
 ##ASSIGNMENT SOLUTIONS####
+
+###################################
+#          EXERCISE 1          
+###################################
 """prices = [100,150,200,250,300]
 
 newprices = list(map(lambda x:x-(0.1*x), prices))
@@ -28,6 +32,10 @@ weights_lb = list(map(kg_to_lbs,weights_kg))
 
 print(weights_lb)"""
 
+########################################
+#            EXERCISE 2                  
+########################################
+
 
 recent_visitors = [101, 102, 103, 101, 104, 105, 102, 106]
 
@@ -44,3 +52,24 @@ print("These are the resent and VIP visitors", resent_and_vip_customers)
 
 VIP_but_not_recent = vip_customers.difference(unique_recent_visitors)
 print("These are VIP customers ut did not visit our website recently", VIP_but_not_recent)
+
+###############################
+#       EXERCISE 3        
+###############################
+products = {
+    "Laptop": {"price": 1200, "stock": 5, "category": "Electronics"},
+    "Smartphone": {"price": 800, "stock": 10, "category": "Electronics"},
+    "Chair": {"price": 150, "stock": 20, "category": "Furniture"},
+    "Desk": {"price": 300, "stock": 15, "category": "Furniture"}
+}
+products["Tablet"] = {"price": 400, "stock": 8, "category": "Electronics"}
+print(products)
+products["Laptop"]["stock"] += 3
+print(products)
+
+
+total_inventory_value = 0
+for product, value in products.items():
+    total_inventory_value += (value["price"] * value["stock"])
+
+print(total_inventory_value)
