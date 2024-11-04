@@ -8,11 +8,11 @@ print(word_to_number)
 ###################################
 #          EXERCISE 1          
 ###################################
-"""prices = [100,150,200,250,300]
+prices = [100,150,200,250,300]
 
 newprices = list(map(lambda x:x-(0.1*x), prices))
 print(newprices)
-"""
+
 """Side notes
 def map(func, iterable):
     for i in iterable:
@@ -73,3 +73,18 @@ for product, value in products.items():
     total_inventory_value += (value["price"] * value["stock"])
 
 print(total_inventory_value)
+
+
+
+##########################################
+###      FINGER EXCERCISE
+##########################################
+"""Impliment a function that takes two lists with the same number of elemets,and returns the sum of each element in l1 raised to its corresponding element in l2"""
+
+l1 = [1, 2]
+l2 = [2, 3]
+results = list(map(lambda x, y: x ** y, l1, l2))
+total = sum(map(lambda x, y: x ** y, l1, l2))
+
+print("The answer is:", total)
+print(results)
