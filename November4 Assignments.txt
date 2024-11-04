@@ -1,0 +1,67 @@
+Exercise 1: Using map
+
+In this exercise, you’ll use the `map` function to perform various transformations on lists of numbers, strings, and nested lists.  map is a higher-order function that applies a given function to each element in a list, which can be helpful for data manipulation tasks.
+Part 1: Basic Transformation
+
+You are given a list of item prices in dollars:
+prices = [100, 150, 200, 250, 300]
+Use map to apply a 10% discount to each price. Return a new list with the discounted prices.  Do not use a loop.
+How does map apply the discount function to each element in the list? Why is map useful in situations like this?
+
+Part 2: Applying Functions to Strings
+
+You are given a list of product codes that are all in lowercase:
+product_codes = ["abc123", "def456", "ghi789"]
+Use map to convert each product code to uppercase.  Do not use a loop.
+What happens to each product code when using map?  Are there advantages to map compared to a loop?
+
+Part 3: Applying Custom Functions
+
+You are given a list of item weights in kilograms:
+weights_kg = [50, 75, 100, 120]
+Write a function called `kg_to_lbs` that converts kilograms to pounds (1 kg = 2.20462 lbs). Then, use map to apply this function to the list of weights.
+How does map apply the kg_to_lbs function to each weight? Why is it sometimes helpful to use custom functions?
+
+
+Exercise 2: Working with Sets
+
+In this exercise, you’ll use Python sets to analyze and manage customer data for an online store. Sets are particularly useful for operations involving unique values and finding relationships between different datasets.
+
+As part of the analytics team, you need to analyze customer data to identify unique visitors, returning customers, VIP customers, and customers who might be eligible for special promotions. You have customer data from different sources, and you’ll use sets to perform various operations on this data.
+Part 1: Unique Customers
+
+You are given a list of customer IDs from recent website visits. The list may contain duplicate IDs, as some customers visited the website multiple times.
+recent_visitors = [101, 102, 103, 101, 104, 105, 102, 106]
+Use a set to remove duplicate customer IDs and find the unique visitors.
+How does using a set help in identifying unique customers? Why are sets useful for data that may contain duplicates?
+Part 2: Returning Customers
+
+You have another list of customer IDs for customers who made purchases in the past month:
+recent_purchasers = {102, 103, 107, 108}
+Use set intersection to identify customers who visited the website recently and also made a purchase in the past month.
+Why is it helpful to use the intersection of two sets in this case? What does the result represent?
+Part 3: VIPs
+
+You have a list of VIP customer IDs:
+vip_customers = {105, 106, 109, 110}
+Use set union to create a set that combines the recent visitors and VIP customers, so you have a list of all customers who have visited recently or are VIPs.
+What does the union of these two sets represent? When might this information be helpful for the store?
+Use set difference to find VIP customers who did not visit the website recently. These VIPs might benefit from a re-engagement campaign.
+How does the set difference operation help here? Why is it useful for identifying customers who didn’t perform a certain action?
+
+Exercise 3: Using Dictionaries
+
+In this exercise, you’ll work with dictionaries to store and analyze product information for an online store. Each product has associated details such as price, stock, and category. You’ll perform various operations on this data, like adding new products, updating stock, and calculating total inventory value.
+A Product Dictionary
+
+You are given the following dictionary, where each key is a product name, and each value is a nested dictionary containing the product details:
+products = {
+    "Laptop": {"price": 1200, "stock": 5, "category": "Electronics"},
+    "Smartphone": {"price": 800, "stock": 10, "category": "Electronics"},
+    "Chair": {"price": 150, "stock": 20, "category": "Furniture"},
+    "Desk": {"price": 300, "stock": 15, "category": "Furniture"}
+}
+Add a new product, "Tablet," with a price of $400, stock quantity of 8, and category "Electronics" to the dictionary.
+Update the stock quantity for the "Laptop" by adding 3 more units to the existing stock.
+Use a loop to calculate the total inventory value by summing up the value of each product (price * stock). Store this value in a variable called total_inventory_value.
+What advantages does a dictionary bring to these operations, compared to lists?
