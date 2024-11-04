@@ -27,3 +27,9 @@ gen_code_keys = (lambda book, plain_text:({c: str(book.find(c)) for c in plain_t
 
 (book.find(c)) retuns the index of the first occurence of the substring s1 in s, and -1 if s1 is not in s
 
+########################
+Sets
+########################
+Sets are unordered collections of unique elements
+
+
