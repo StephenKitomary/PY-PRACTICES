@@ -54,13 +54,16 @@ def play_game():
         # Start at the first question and follow the responses
         current_question_index = 0
         current_answers = animals
+        parent_branch = None
+        response_key = None
         
         while isinstance(current_answers, dict):
             # Ask the current question
             answer = ask_yes_no(questions[current_question_index])
             response_key = (current_question_index, "yes" if answer else "no")
             
-            # Check if we reached an animal or need to ask more questions
+            # Keep track of the parent branch and response key in case we need to modify it
+            parent_branch = current_answers
             if response_key in current_answers:
                 current_answers = current_answers[response_key]
                 current_question_index += 1
@@ -72,7 +75,7 @@ def play_game():
             if ask_yes_no(f"Is your animal a {current_answers}?"):
                 print("Yay! I guessed it!")
             else:
-                learn_new_animal(current_question_index, current_answers)
+                learn_new_animal(parent_branch, response_key, current_answers)
         else:
             print("I couldn't guess the animal.")
         
@@ -81,18 +84,18 @@ def play_game():
             print("Thanks for playing!")
             break
 
-def learn_new_animal(last_question_index, guessed_animal):
+def learn_new_animal(parent_branch, response_key, guessed_animal):
     """Learn a new animal if the guess was wrong."""
     new_animal = input("What was your animal? ").strip().lower()
     new_question = input(f"What question could distinguish {new_animal} from {guessed_animal}? ").strip()
     answer_for_new_animal = ask_yes_no(f"For a {new_animal}, would the answer to '{new_question}' be yes?")
 
-    # Add the new question and animals to our lists
+    # Add the new question to the questions list
     questions.append(new_question)
     new_question_index = len(questions) - 1
-    
-    # Update the animal dictionary with new information
-    animals[(last_question_index, "yes" if answer_for_new_animal else "no")] = {
+
+    # Create a new branch for the new question with both the old and new animals as options
+    parent_branch[response_key] = {
         (new_question_index, "yes" if answer_for_new_animal else "no"): new_animal,
         (new_question_index, "no" if answer_for_new_animal else "yes"): guessed_animal
     }
