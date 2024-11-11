@@ -1,7 +1,7 @@
-# Initial list of questions, answers, and animals
+# Initial questions
 questions = [
     "Does the animal you are thinking of have four legs?",
-    "Is the animal you are thinking of large and gray?"
+    "Is the animal you are thinking of a wild animal?"
 ]
 
 # Initial animals corresponding to answers for each question
@@ -16,7 +16,7 @@ animals = {
 def ask_yes_no(question):
     """Ask a yes or no question and return True for yes, False for no.
     If the user types 'list', print the known animals.
-    If the user types 'dict' or 'questions', print the dictionary or list of questions for troubleshooting."""
+    If the user types 'dict' or 'questions', print the dictionary or list of questions that we currently have."""
     while True:
         answer = input(question + " (yes/no): ").strip().lower()
         if answer == "list":
