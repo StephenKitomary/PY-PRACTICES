@@ -47,7 +47,9 @@ def print_known_animals(animals_dict):
     print("Known animals:", ", ".join(sorted(known_animals)))
 
 def play_game():
-    print("Hi! I'm an animal guesser.")
+    print("#########################")
+    print("ANIMAL GUESS GAME")
+    print("#########################")
     print("Think of an animal, and I will try to guess it.")
     
     while True:
