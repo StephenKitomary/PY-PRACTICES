@@ -1,49 +1,54 @@
-# Define a function called letter_pairs that takes a string of letters as input,
-# and outputs those letters as pairs separated by spaces.  For example:
-# letter_pairs(‘george’) # ‘ge eo or rg ge'
-def letter_pairs(s):
-    # Base case
-    if (len(s) < 3):
-        return s[0] + s[1]
-    # Recursize case
+#########################################
+# QUESTION NUMBER 1
+#########################################
+def letter_pairs(input_string):
+
+    if (len(input_string) < 3):
+        return input_string[0] + input_string[1]
     else:
-        return s[0] + s[1] + ' ' + letter_pairs(s[1:])
+        return input_string[0] + input_string[1] + ' ' + letter_pairs(input_string[1:])
 
-letter_pairs('george') # 'ge eo or rg ge'
+letter_pairs('mermaids')
+
+print(letter_pairs('mermaids'))
 
 
+###############################################
+#    QUESTION NUMBER 2
+##############################################
 
-# Write a function called initials that takes a string of words, and returns a
-# string with the first letter of each word separated by spaces.  For example,
-# initials(‘you cannot always get what you want’) # ‘y c a g w y w’
-def initials(s):
+# Define a function called initials that takes a string of words,
+# and returns a string with the first character of each word separated by spaces.
+# For example, initials('stay curious and keep learning') # 's c a k l'
+
+def initials(text):
     # Base cases
-    if s == '': # If string is blank, return blank
+    if text == '':  # If the input string is empty, return an empty string
         return ''
-    elif ' ' not in s: # If string is a single word, return the first char
-        return s[0]
+    elif ' ' not in text:  # If the input string is a single word, return its first letter
+        return text[0]
 
-    #Recursive case
+    # Recursive case
     else:
-        # Split s between spaces, and grab the first word
-        first_word = s.split(' ')[0]
-        # Cut s down by the length of the first word + 1 (for the space)
-        remaining_string = s[len(first_word) + 1:]
-        # Return the first letter of first_word + ' ' + recursive call
-        return first_word[0] + ' ' + initials(remaining_string)
+        # Split the input text by spaces and take the first word
+        first_word = text.split(' ')[0]
+        # Slice the input text by removing the length of the first word + 1 (to exclude the space)
+        remaining_text = text[len(first_word) + 1:]
+        # Combine the first character of the first_word, a space, and the recursive result
+        return first_word[0] + ' ' + initials(remaining_text)
 
-initials('you cannot always get what you want')
+print(initials('stay curious and keep learning'))
+
 
 
 # Write a function called copies that takes an integer and string, and returns
 # the string repeated integer times.  For example, copies(3, ‘hello’) # ‘hello
 # hello hello’.
 def copies(n, word):
-    # Base case
+
     if n == 1:
         return word
 
-    # Recursive case
     return word + ' ' + copies(n-1, word)
 
 copies(3, 'hello')
