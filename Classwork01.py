@@ -29,7 +29,7 @@ def  play_game(switch_strategy):
     else:
         pass
         #print("You lose!")
-    Game_stats = {'prize_door': prize, 'initial_choice': user_choice, 'revealed_door':revealed_door, 'final_choice': final_choice[0]}
+    Game_stats = {'prize_door': prize, 'initial_choice': user_choice, 'revealed_door':revealed_door[0], 'final_choice': final_choice[0]}
     return Game_stats
 
-print(play_game(False))
+print(play_game(True))
