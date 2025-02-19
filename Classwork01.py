@@ -22,14 +22,19 @@ def  play_game(switch_strategy):
     else:
         final_choice[0] = user_choice
     #print("final choice:", final_choice[0])
-        
-    if final_choice[0] == prize:
-        pass
-        #print("You win!")
-    else:
-        pass
-        #print("You lose!")
     Game_stats = {'prize_door': prize, 'initial_choice': user_choice, 'revealed_door':revealed_door[0], 'final_choice': final_choice[0]}
     return Game_stats
 
-print(play_game(True))
+def run_simulation(num_games):
+   switch_wins = 0
+   stay_wins = 0
+
+   for i in range(num_games):
+       play_game(True)
+       if play_game(True)['final_choice'] == play_game(True)['prize_door']:
+           switch_wins += 1
+        else:
+            pass
+       
+
+run_simulation(20)
