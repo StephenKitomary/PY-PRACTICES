@@ -26,15 +26,41 @@ def  play_game(switch_strategy):
     return Game_stats
 
 def run_simulation(num_games):
-   switch_wins = 0
-   stay_wins = 0
+    switch_wins = 0
+    stay_wins = 0
+    with open("game_simulation.txt", "w") as file:
+        # Simulate games with the switching strategy:
+        for _ in range(num_games):
+            game = play_game(True)
+            if game['final_choice'] == game['prize_door']:
+                switch_wins += 1
+                outcome = "win"
+            else:
+                outcome = "loss"
+            log_line = f"{game['prize_door']}; {game['initial_choice']}; {game['revealed_door']}; {game['final_choice']}; {outcome}; switch"
+            file.write(log_line + "\n")
+        
+        # Simulate games with the staying strategy:
+        for _ in range(num_games):
+            game = play_game(False)
+            if game['final_choice'] == game['prize_door']:
+                stay_wins += 1
+                outcome = "win"
+            else:
+                outcome = "loss"
+            log_line = f"{game['prize_door']}; {game['initial_choice']}; {game['revealed_door']}; {game['final_choice']}; {outcome}; stay"
+            file.write(log_line + "\n")
+        
+    switch_win_rate = (switch_wins / num_games) * 100
+    stay_win_rate = (stay_wins / num_games) * 100
 
-   for i in range(num_games):
-       play_game(True)
-       if play_game(True)['final_choice'] == play_game(True)['prize_door']:
-           switch_wins += 1
-        else:
-            pass
+    print("Number of games (per strategy):", num_games)
+    print("Number of switch wins:", switch_wins)
+    print("Number of stay wins:", stay_wins)
+    print(f"Switch win rate: {switch_win_rate:.2f}%")
+    print(f"Stay win rate: {stay_win_rate:.2f}%")
+
+    
        
 
-run_simulation(20)
+run_simulation(10000)
