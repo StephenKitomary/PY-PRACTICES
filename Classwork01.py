@@ -29,8 +29,8 @@ def run_simulation(num_games):
     switch_wins = 0
     stay_wins = 0
     with open("game_simulation.txt", "w") as file:
-        # Simulate games with the switching strategy:
-        for _ in range(num_games):
+        # switch
+        for i in range(num_games):
             game = play_game(True)
             if game['final_choice'] == game['prize_door']:
                 switch_wins += 1
@@ -40,8 +40,8 @@ def run_simulation(num_games):
             log_line = f"{game['prize_door']}; {game['initial_choice']}; {game['revealed_door']}; {game['final_choice']}; {outcome}; switch"
             file.write(log_line + "\n")
         
-        # Simulate games with the staying strategy:
-        for _ in range(num_games):
+        # stay:
+        for i in range(num_games):
             game = play_game(False)
             if game['final_choice'] == game['prize_door']:
                 stay_wins += 1
