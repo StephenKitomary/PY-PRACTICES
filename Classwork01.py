@@ -54,11 +54,11 @@ def run_simulation(num_games):
     switch_win_rate = (switch_wins / num_games) * 100
     stay_win_rate = (stay_wins / num_games) * 100
 
-    print("Number of games (per strategy):", num_games)
+    """print("Number of games (per strategy):", num_games)
     print("Number of switch wins:", switch_wins)
     print("Number of stay wins:", stay_wins)
     print(f"Switch win rate: {switch_win_rate:.2f}%")
-    print(f"Stay win rate: {stay_win_rate:.2f}%")
+    print(f"Stay win rate: {stay_win_rate:.2f}%")"""
 
     
        
