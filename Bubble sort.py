@@ -1,7 +1,3 @@
-"""Begin by loading Numbers.txt into a list.This file contains 100 integers between 0 and 1000D
-efine the function load_numbers(filename), where filename is a formal parameter that is a string, containing the name of the file you want to load.
-You should return a list that contains the (unsorted) numbers in filename as a list."""
-
 def load_numbers(filename):
     with open(filename) as file:
         numbers = file.readlines()
