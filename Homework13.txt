@@ -1,0 +1,13 @@
+Define a function called letter-pairs that takes a string of letters as input, and outputs those letters as pairs separated by spaces.  For example: letter-pairs(‘george’) # ‘ge er or rg ge”
+
+
+Write a function called initials that takes a string of words, and returns a string with the first letter of each word separated by spaces.  For example, initials(‘you cannot always get what you want’) # ‘y c a g w y w’
+
+
+Write a function called copies that takes an integer and string, and returns the string repeated integer times.  For example, copies(3, ‘hello’) # ‘hello hello hello’.
+
+
+Write a function called remove that takes a word and a string of words, and returns the string of words with any instances of word removed.  For example, remove_word(‘cannot’, ‘you cannot always get what you want’) # ‘you always get what you want’
+
+
+Write a function called describe_time that takes a time in seconds, and returns a description of the time in terms of centuries, years, weeks, days, hours, minutes, and seconds.  For example: describe_time(22222) # ‘6 hours 10 minutes 22 seconds’ and  describe_time(4967189641) # ‘1 century 57 years 20 weeks 6 days 8 hours 54 minutes 1 seconds.’

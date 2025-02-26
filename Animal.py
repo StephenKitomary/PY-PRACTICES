@@ -1,10 +1,10 @@
-# Initial list of questions, answers, and animals
+# Initial questions
 questions = [
     "Does the animal you are thinking of have four legs?",
-    "Is the animal you are thinking of large and gray?"
+    "Is the animal you are thinking of a wild animal?"
 ]
 
-# Initial animals corresponding to answers for each question
+# Initial animals 
 animals = {
     (0, "yes"): {
         (1, "yes"): "elephant",
@@ -16,9 +16,9 @@ animals = {
 def ask_yes_no(question):
     """Ask a yes or no question and return True for yes, False for no.
     If the user types 'list', print the known animals.
-    If the user types 'dict' or 'questions', print the dictionary or list of questions for troubleshooting."""
+    If the user types 'dict' or 'questions', print the dictionary or list of questions that we currently have."""
     while True:
-        answer = input(question + " (yes/no): ").strip().lower()
+        answer = input(question + " (yes/no): ").lower()
         if answer == "list":
             print_known_animals(animals)
         elif answer == "dict":
@@ -47,7 +47,9 @@ def print_known_animals(animals_dict):
     print("Known animals:", ", ".join(sorted(known_animals)))
 
 def play_game():
-    print("Hi! I'm an animal guesser.")
+    print("#########################")
+    print("ANIMAL GUESS GAME")
+    print("#########################")
     print("Think of an animal, and I will try to guess it.")
     
     while True:
@@ -86,7 +88,7 @@ def play_game():
 
 def learn_new_animal(parent_branch, response_key, guessed_animal):
     """Learn a new animal if the guess was wrong."""
-    new_animal = input("What was your animal? ").strip().lower()
+    new_animal = input("What was your animal? ").lower()
     new_question = input(f"What question could distinguish {new_animal} from {guessed_animal}? ").strip()
     answer_for_new_animal = ask_yes_no(f"For a {new_animal}, would the answer to '{new_question}' be yes?")
 
