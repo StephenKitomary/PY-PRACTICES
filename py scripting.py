@@ -9,7 +9,7 @@ import openai
 import time
 
 # Set your OpenAI API key
-openai.api_key = ""
+
 
 # Define a function to call the OpenAI API for classifying the ticket
 def classify_ticket(ticket_text):
