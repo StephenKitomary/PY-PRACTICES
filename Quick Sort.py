@@ -1,4 +1,10 @@
-def sort(My_List, Start, End):
+def quick_sort(My_List, left, right):
+    if left < right:
+        pivot_index = pivot(My_List,left, right)
+        quick_sort(My_List, left, pivot_index-1)
+        quick_sort(My_List, pivot_index+1, right)
+    return My_List
+
     
 
 def pivot(My_List,pivot_index, end_index):
@@ -14,4 +20,6 @@ def pivot(My_List,pivot_index, end_index):
 
 def swap(My_List, index1, index2):
     My_List[index1], My_List[index2] = My_List[index2], My_List[index1]
-3
+
+List = [4,6,2,1,7,3,8,5]
+print(quick_sort(List, 0, len(List)-1))
