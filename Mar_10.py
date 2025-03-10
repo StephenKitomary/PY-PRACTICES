@@ -17,6 +17,15 @@ class Int_set(object):
         try:
             self._vals.remove(e)
         except:
-            raise Valueeror(str(e)+ "not found")
+            raise ValueError(str(e)+ "not found")
+
+    def get_members(self):
+        """Returns a list containing the elements of self. Nothing can be assumend about the order of the elements"""
+        return self._vals[:]
+
+    def __str__(self):
+        """Returns a string representation of sef"""
+        if self._vals = []:
+            return '{}'
 
     
