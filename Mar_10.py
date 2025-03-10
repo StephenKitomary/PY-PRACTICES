@@ -25,7 +25,12 @@ class Int_set(object):
 
     def __str__(self):
         """Returns a string representation of sef"""
-        if self._vals = []:
+        if self._vals == []:
             return '{}'
+        self._vals.sort()
+        result=''
+        for e in self._vals:
+            result = result +str(e) + ','
+        return f'{{{result[:-1]}}}'
 
     
