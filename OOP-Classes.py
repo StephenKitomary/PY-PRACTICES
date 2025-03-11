@@ -22,3 +22,5 @@ if choice == "y":
 else:
     print("okay i wont do it sir")
     
+my_obj = MyClass()
+print(my_obj.language)
